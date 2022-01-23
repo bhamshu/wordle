@@ -1,7 +1,7 @@
 from collections import defaultdict
 
-f=open('/home/shubham/Downloads/words.txt')
-words = [word.lower() for word in f.read().split("\n") if len(word)==5]
+f=open('words.txt')
+words = [word.lower() for word in f.read().split("\n") if len(word)==5 and word.isalpha()]
 
 class Wordle():
     disjoint_alphabets = []
