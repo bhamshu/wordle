@@ -26,8 +26,8 @@ class Wordle():
                 if word[i] in self.wrong_places_alphabets[i]:
                     return False
                 # wrong places alphabets must be *somewhere* in the word 
-                if not set([item for sublist in self.wrong_places_alphabets.values() for item in sublist]).issubset(word):
-                    return False
+            if not set([item for sublist in self.wrong_places_alphabets.values() for item in sublist]).issubset(word):
+                return False
             return True
         def satisfies_right_places(word):
             for i in self.right_places_alphabets.keys():
